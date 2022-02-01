@@ -7,6 +7,8 @@ const View = require('./view');
 
 describe('Page view', () => {
   it('displays 2 paragraphs', () => {
+    // we set document.body.innerHTML to have the same content of the "real" web page 
+    // (that is because Jest "mocks" the HTML content internally).
     document.body.innerHTML = fs.readFileSync('./index.html');
 
     const view = new View();
