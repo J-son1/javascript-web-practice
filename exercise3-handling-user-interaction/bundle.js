@@ -21,7 +21,7 @@
           console.log("Thanks for clicking me!");
           const messageEl = document.createElement("div");
           messageEl.id = "message";
-          messageEl.innerText = "This is a message displayed by JavaScript";
+          messageEl.innerText = document.querySelector("#message-input").value;
           document.querySelector("#main-container").append(messageEl);
         }
         hideMessage() {
